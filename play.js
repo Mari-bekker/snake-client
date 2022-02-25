@@ -2,7 +2,8 @@ const { connect } = require('./client')
 const { setupInput } = require("./input");
 
 console.log("Connecting...");
-connect();
+const conn = connect();
 
-setupInput();
+//connection passed as a parameter into the function.
+setupInput(conn);
 
