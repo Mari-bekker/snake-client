@@ -18,9 +18,6 @@ const connect = function () {
     // example of setInterval
     //setInterval(function () {conn.write("Move: up")}, 1000);
 
-
-
-
   });
 
   // interpret incoming data as text
@@ -34,4 +31,6 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect;
+//module.exports = connect;
+
+module.exports = { connect }
