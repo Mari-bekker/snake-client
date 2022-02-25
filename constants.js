@@ -7,9 +7,10 @@ const MOVELEFT = "Move: left";
 const MOVEDOWN = "Move: down";
 const MOVERIGHT = "Move: right";
 
-const messages = {
+const MESSAGES = {
   f: "Say: ssssslopy move!",
-  g: "Say: good game"
+  g: "Say: good game",
+  l: "Say: long snake is long"
 }
 
 module.exports = {
@@ -19,5 +20,6 @@ module.exports = {
   MOVEUP,
   MOVEDOWN,
   MOVELEFT,
-  MOVERIGHT
+  MOVERIGHT,
+  MESSAGES
 };
