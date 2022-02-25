@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"]((https://github.com/Mari-bekker/snake-client/master/snakeGame.png))
+!["screenshot description"]((https://github.com/Mari-bekker/snake-client/blob/master/snakeGame.png))
 
 ## Getting Started
 
