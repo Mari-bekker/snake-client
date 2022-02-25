@@ -10,6 +10,17 @@ const connect = function () {
   conn.on('connect', () => {
     console.log("Successfully connected to game server" );
     conn.write("Name: MB");
+    // Example of setTimeout:
+    // setTimeout(() => {
+    //   conn.write("Move: up")
+    // }, 500)
+
+    // example of setInterval
+    //setInterval(function () {conn.write("Move: up")}, 1000);
+
+
+
+
   });
 
   // interpret incoming data as text
