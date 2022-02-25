@@ -11,7 +11,7 @@ const MESSAGES = {
   f: "Say: ssssslopy move!",
   g: "Say: good game",
   l: "Say: long snake is long"
-}
+};
 
 module.exports = {
   IP,
