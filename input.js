@@ -22,10 +22,10 @@ const handleUserInput = function () {
 
     if (key === 'w') {
       connection.write("Move: up");
-      //setInterval(function () {connection.write("Move: up");}, 1000);
     }
 
     if (key === 'd') {
+      clearInterval(myInterval);
       connection.write("Move: right");
     }
 
@@ -37,6 +37,14 @@ const handleUserInput = function () {
       connection.write("Move: left");
 
       //setInterval(function () {connection.write("Move: left");}, 1000);
+    }
+
+    if (key === 'f') {
+      connection.write("Say: ssssslopy move!");
+    }
+
+    if (key === 'g') {
+      connection.write("Say: good game");
     }
   });
 
