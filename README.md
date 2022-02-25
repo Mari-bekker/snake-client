@@ -12,5 +12,6 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Getting Started
 
-- Follow steps inside the snek server repo to run the server side - This requires to fork and clone the code from snek multiplayer.
-- Run the development snake client using the `node play.js` command.
+- Follow steps inside the snek server repo to run the server side - This requires to fork and clone the code from snek multiplayer, and then running the 'node play.js' command in one terminal window. 
+- Run the development snake client using the `node play.js` command in another terminal window.
+
