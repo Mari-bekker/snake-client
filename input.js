@@ -1,4 +1,4 @@
-const { stdin } = require("./constants");
+const { stdin, MOVEDOWN, MOVELEFT, MOVEUP, MOVERIGHT } = require("./constants");
 // creating empty global variable
 let connection;
 
@@ -22,19 +22,19 @@ const handleUserInput = function () {
     }
 
     if (key === 'w') {
-      connection.write("Move: up");
+      connection.write(MOVEUP);
     }
 
     if (key === 'd') {
-      connection.write("Move: right");
+      connection.write(MOVERIGHT);
     }
 
     if (key === 's') {
-      connection.write("Move: down");
+      connection.write(MOVEDOWN);
     }
 
     if (key === 'a') {
-      connection.write("Move: left");
+      connection.write(MOVELEFT);
     }
 
     if (key === 'f') {

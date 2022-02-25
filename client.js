@@ -8,6 +8,7 @@ const connect = function () {
     host: IP,
     port: PORT
   });
+  
   conn.on('connect', () => {
     console.log("Successfully connected to game server" );
     conn.write("Name: MB");
