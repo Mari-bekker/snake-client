@@ -9,14 +9,17 @@ const setupInput = function (conn) {
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-
-  stdin.on("data", handleUserInput);
+  
+  stdin.on('data', key => {
+    handleUserInput(key);
+  });
+  //stdin.on("data",handleUserInput);
 
   return stdin;
 };
 
-const handleUserInput = function () {
-  stdin.on('data', (key) => {
+const handleUserInput = function (key) {
+  //stdin.on('data', (key) => {
     if (key === '\u0003') {
       process.exit();
     }
@@ -40,7 +43,7 @@ const handleUserInput = function () {
     if (MESSAGES[key]) {
       connection.write(MESSAGES[key]);
     }
-  });
+  //});
 
 }
 
