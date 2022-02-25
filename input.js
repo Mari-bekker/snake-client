@@ -1,10 +1,11 @@
+const { stdin } = require("./constants");
 // creating empty global variable
 let connection;
 
 const setupInput = function (conn) {
   // assigning the local variable to the global one so it can be used everywhere. 
   connection = conn;
-  const stdin  = process.stdin;
+  //const stdin  = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
@@ -15,7 +16,7 @@ const setupInput = function (conn) {
 };
 
 const handleUserInput = function () {
-  process.stdin.on('data', (key) => {
+  stdin.on('data', (key) => {
     if (key === '\u0003') {
       process.exit();
     }
@@ -25,7 +26,6 @@ const handleUserInput = function () {
     }
 
     if (key === 'd') {
-      clearInterval(myInterval);
       connection.write("Move: right");
     }
 
@@ -35,8 +35,6 @@ const handleUserInput = function () {
 
     if (key === 'a') {
       connection.write("Move: left");
-
-      //setInterval(function () {connection.write("Move: left");}, 1000);
     }
 
     if (key === 'f') {

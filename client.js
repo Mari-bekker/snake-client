@@ -1,25 +1,22 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
 
 // establishes a connection with the game server
 
 const connect = function () {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541
+    host: IP,
+    port: PORT
   });
   conn.on('connect', () => {
     console.log("Successfully connected to game server" );
     conn.write("Name: MB");
-    setInterval(function() { conn.write("Move: up")}, 500);
+    //setInterval(function() { conn.write("Move: up")}, 500);
 
     // Example of setTimeout:
     // setTimeout(() => {
     //   conn.write("Move: up")
     // }, 500)
-
-    // example of setInterval
-    //setInterval(function () {conn.write("Move: up")}, 1000);
-
   });
 
   // interpret incoming data as text
